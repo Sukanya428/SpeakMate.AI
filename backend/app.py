@@ -24,5 +24,5 @@ def greet():
 name=greet()
 
 user_msg=input("What would you like to talk about today?")
-ai_response=get_response(user_msg)
+ai_response=get_response(user_msg)  #function call from chatbot.py
 print(ai_response)
