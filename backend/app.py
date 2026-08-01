@@ -12,7 +12,7 @@ wlc()
 def greet():
         while True:            
                 print("What's Your name?")
-                name=input("Please enter your name ") 
+                name=input("Please enter your name: ") 
                 name=name.title()#title is use for correcting input sequence like suKANYA to this Sukanya
                 name=name.strip()#.strip is use for removing extra space
                 if name=="":
@@ -23,6 +23,12 @@ def greet():
         return name      
 name=greet()
 
-user_msg=input("What would you like to talk about today?")
-ai_response=get_response(user_msg)  #function call from chatbot.py
-print(ai_response)
+print("\n What would you like to talk about today?")
+while True:
+     user_msg = input("You: ")
+     if( user_msg.strip().lower() == "bye"):
+        print("Thank you for practicing English with SpeakMate...")
+        print("Have a wonderful day!")
+        break 
+     ai_response=get_response(user_msg)  #function call from chatbot.py
+     print(ai_response)

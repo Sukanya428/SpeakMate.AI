@@ -35,10 +35,14 @@ Keep the conversation friendly, motivating, and natural.
 Never make the user feel embarrassed for making mistakes.
 """
 def get_response(user_message):
-    full_prompt = SYSTEM_PROMPT + "\n\nUser: " + user_message
-    response=client.models.generate_content(   #response is variable in which aichatbot is saying to genrate respose
-       model=MODEL_NAME,   #which gemini version model is used
-       contents=full_prompt  #here we send user message
-    )
-
-    return response.text     #return AI respose
+      full_prompt = SYSTEM_PROMPT + "\n\nUser: " + user_message
+      try:
+         print("Sending request to Gemini...")
+         response=client.models.generate_content(   #response is variable in which aichatbot is saying to genrate respose
+            model=MODEL_NAME,   #which gemini version model is used
+            contents=full_prompt  #here we send user message
+         )
+         print("Response received from Gemini.")
+      except:
+        return "Sorry, I'm having trouble connecting right now. Please try again later."
+      return response.text     #return AI respose
