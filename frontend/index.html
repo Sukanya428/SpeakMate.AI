@@ -3,26 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeakMate AI</title>
     <link rel="stylesheet" href="style.css">
-    <title>SpeakMate.AI</title>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="images/logo.png" alt="SpeakMate Logo">
-        </div>
-        <ul class="nav-links">
-            <li><a href="#" class="active">Dashboard</a></li>
-            <li><a href="#">Practise Hub</a></li>
-            <li><a href="#">My progress</a></li>
-            <li><a href="#">Vocabulary</a></li>
-        </ul>
-        <div class="profile">
-            <img src="images/profile.png" alt="profile">
-        </div>
-    </nav>
 
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+        <span>SpeakMate AI</span>
+    </div>
 
-    <script src="script.js"></script>
+    <button class="start-btn" onclick="window.location.href='chat.html'">
+        Start Speaking
+    </button>
+</nav>
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>Hello, User 👋</h1>
+
+        <p>
+            Improve your English speaking with an AI conversation partner.
+        </p>
+
+        <button onclick="window.location.href='chat.html'">
+            Start Conversation
+        </button>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="images/robot.png" alt="Robot">
+
+    </div>
+
+</section>
+
 </body>
 </html>
